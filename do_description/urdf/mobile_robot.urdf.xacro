@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<robot name="mobile_robot" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+    <xacro:include filename="$(find do_description)/urdf/fourwheeler.urdf.xacro" />
+    <xacro:fourwheeler_base_macro/>
+    <!--mobile base 50 cm x 50 cm square-->
+
+    <xacro:include filename="$(find do_description)/urdf/operate_device.urdf.xacro" />
+    <xacro:operate_device_macro parent="link_support" robotname="mobile_robot">
+      <xacro:property name="location_x" value="0.25" />
+      <xacro:property name="location_y" value="0" />
+      <xacro:property name="location_z" value="0.55" />
+    </xacro:operate_device_macro>
+</robot>

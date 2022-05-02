@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<robot name="mobile_robot" xmlns:xacro="https://www.ros.org/wiki/xacro" >
+    <xacro:include filename="$(find do_description)/urdf/fourwheeler.urdf.xacro" />
+    <xacro:fourwheeler_base_macro/>
+    <!--mobile base 50 cm x 50 cm square-->
+
+</robot>
