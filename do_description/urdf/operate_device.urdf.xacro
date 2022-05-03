@@ -62,18 +62,18 @@
         <parent link="link_bar"/>
         <child link="link_vslider"/>
         <axis xyz="0 0 1"/>
-        <limit upper="${bar_z-0.05}" lower="0.05" effort="1000.0" velocity="0.1"/>
+        <limit upper="${bar_z-0.05}" lower="0.1" effort="1000.0" velocity="0.1"/>
         <dynamics damping="0" friction="2.0"/>
       </joint>
       <link name="link_vslider">
         <visual>
-          <origin xyz="${vslider_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${vslider_x/2 + location_x} ${location_y} ${location_z - bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${vslider_x} ${vslider_y} ${vslider_z}"/>
           </geometry>
         </visual>
         <collision>
-          <origin xyz="${vslider_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${vslider_x/2 + location_x} ${location_y} ${location_z- bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${vslider_x} ${vslider_y} ${vslider_z}"/>
           </geometry>
@@ -95,13 +95,13 @@
       </joint>
       <link name="link_hslider">
         <visual>
-          <origin xyz="${hslider_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${hslider_x/2 + location_x} ${location_y} ${location_z- bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${hslider_x} ${hslider_y} ${hslider_z}"/>
           </geometry>
         </visual>
         <collision>
-          <origin xyz="${hslider_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${hslider_x/2 + location_x} ${location_y} ${location_z- bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${hslider_x} ${hslider_y} ${hslider_z}"/>
           </geometry>
@@ -121,13 +121,13 @@
 
       <link name="link_finger">
         <visual>
-          <origin xyz="${finger_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${finger_x/2 + location_x} ${location_y} ${location_z - bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${finger_x} ${finger_y} ${finger_z}"/>
           </geometry>
         </visual>
         <collision>
-          <origin xyz="${finger_x/2 + location_x} ${location_y} ${location_z}" rpy="0 0 0" />
+          <origin xyz="${finger_x/2 + location_x} ${location_y} ${location_z - bar_z/2}" rpy="0 0 0" />
           <geometry>
             <box size="${finger_x} ${finger_y} ${finger_z}"/>
           </geometry>
@@ -146,13 +146,13 @@
       </joint>
       <link name="link_tip">
         <visual>
-          <origin xyz="${tip_x/2 + location_x} ${location_y} ${location_z-0.02}" rpy="0 0 0" />
+          <origin xyz="${tip_x/2 + location_x} ${location_y} ${location_z-bar_z/2-0.02}" rpy="0 0 0" />
           <geometry>
             <box size="${tip_x} ${tip_y} ${tip_z}"/>
           </geometry>
         </visual>
         <collision>
-          <origin xyz="${tip_x/2 + location_x} ${location_y} ${location_z-0.02}" rpy="0 0 0" />
+          <origin xyz="${tip_x/2 + location_x} ${location_y} ${location_z-bar_z/2-0.02}" rpy="0 0 0" />
           <geometry>
             <box size="${tip_x} ${tip_y} ${tip_z}"/>
           </geometry>

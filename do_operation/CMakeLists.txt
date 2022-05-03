@@ -138,6 +138,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/do_operation_node.cpp)
 add_executable(teleop_robot src/teleop_node.cpp)
+add_executable(teleop_robot2 src/teleop_node2.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -154,6 +155,7 @@ add_executable(teleop_robot src/teleop_node.cpp)
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(teleop_robot ${catkin_LIBRARIES})
+target_link_libraries(teleop_robot2 ${catkin_LIBRARIES})
 
 #############
 ## Install ##

@@ -11,9 +11,14 @@
  <!-- Axes -->
   <param name="axis_linear" value="1" type="int"/>
   <param name="axis_angular" value="0" type="int"/>
+  <param name="axis_vertical" value="4" type="int"/>
+  <param name="axis_horizontal" value="3" type="int"/>
   <param name="scale_linear" value="2" type="double"/>
   <param name="scale_angular" value="2" type="double"/>
+  <param name="scale_vertical" value="1" type="double"/>
+  <param name="scale_horizontal" value="1" type="double"/>
   <node pkg="do_operation" type="teleop_robot" name="teleop"/>
+  <node pkg="do_operation" type="teleop_robot2" name="teleop2"/>
 
   <rosparam file="$(find do_operation)/config/robot_control.yaml" command="load"/>
 
