@@ -42,8 +42,8 @@ void TeleopRobot::joyCallback(const sensor_msgs::Joy::ConstPtr& joy)
 {
   std_msgs::Float64 twist;
   std_msgs::Float64 twist1;
-  twist.data = twist.data+v_scale_*joy->axes[vertical_];
-  twist1.data = twist1.data-h_scale_*joy->axes[horizontal_];
+  twist.data = v_scale_*joy->axes[vertical_];
+  twist1.data = -h_scale_*joy->axes[horizontal_];
 
   vert_pub_.publish(twist);
   horz_pub_.publish(twist1);
